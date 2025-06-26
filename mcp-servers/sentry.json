@@ -1,7 +1,21 @@
 {
-    "mcpServers": {
-        "sentry": {
-            "url": "https://mcp.sentry.dev/mcp"
-        }
+  "mcpServers": {
+    "Sentry": {
+      // How to get Sentry Auth Token:
+      // 1. Go to https://sentry.io
+      // 2. Navigate to Settings → Auth Tokens
+      // 3. Click "Create New Token"
+      // 4. Give it a name (e.g., "MCP Integration")
+      // 5. Select these scopes:
+      //    - org:read
+      //    - project:read
+      //    - project:write
+      //    - team:read
+      //    - team:write
+      //    - event:write
+      // 6. Copy the generated token and paste it here
+      "command": "uvx",
+      "args": ["mcp-server-sentry", "--auth-token", "<YOUR_AUTH_TOKEN>"]
     }
+  }
 }
