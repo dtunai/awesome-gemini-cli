@@ -1,0 +1,62 @@
+<svg width="800" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="geminiGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1E90FF;stop-opacity:1" />
+      <stop offset="20%" style="stop-color:#4169E1;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#6A5ACD;stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#9370DB;stop-opacity:1" />
+      <stop offset="80%" style="stop-color:#DA70D6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF69B4;stop-opacity:1" />
+    </linearGradient>
+    <style>
+      .pixel-text {
+        font-family: 'Courier New', monospace;
+        font-size: 48px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        fill: url(#geminiGradient);
+      }
+      .subtitle {
+        font-family: 'Arial', sans-serif;
+        font-size: 16px;
+        fill: #666;
+        text-anchor: middle;
+      }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="200" fill="#0D1117"/>
+  
+  <!-- Pixel-style background pattern -->
+  <defs>
+    <pattern id="pixelPattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <rect width="20" height="20" fill="#0D1117"/>
+      <rect x="0" y="0" width="2" height="2" fill="#161B22" opacity="0.3"/>
+      <rect x="10" y="10" width="2" height="2" fill="#161B22" opacity="0.3"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="200" fill="url(#pixelPattern)"/>
+  
+  <!-- Main GEMINI text -->
+  <text x="400" y="100" class="pixel-text" text-anchor="middle" dominant-baseline="middle">
+    ░▒▓ GEMINI ▓▒░
+  </text>
+  
+  <!-- CLI subtitle -->
+  <text x="400" y="140" class="subtitle">
+    CLI
+  </text>
+  
+  <!-- Decorative elements -->
+  <rect x="50" y="90" width="4" height="4" fill="#1E90FF"/>
+  <rect x="60" y="85" width="4" height="4" fill="#4169E1"/>
+  <rect x="70" y="95" width="4" height="4" fill="#6A5ACD"/>
+  
+  <rect x="740" y="90" width="4" height="4" fill="#DA70D6"/>
+  <rect x="750" y="85" width="4" height="4" fill="#FF69B4"/>
+  <rect x="730" y="95" width="4" height="4" fill="#9370DB"/>
+  
+  <!-- Bottom accent line -->
+  <rect x="100" y="160" width="600" height="2" fill="url(#geminiGradient)" opacity="0.6"/>
+</svg> 

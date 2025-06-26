@@ -1,0 +1,51 @@
+{
+    "model": "gemini-2.5-pro",
+    "temperature": 0.7,
+    "maxTokens": 4096,
+    "mcpServers": {
+        "github": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@modelcontextprotocol/server-github"
+            ],
+            "env": {
+                "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_PERSONAL_ACCESS_TOKEN}"
+            }
+        },
+        "sentry": {
+            "url": "https://mcp.sentry.dev/mcp"
+        },
+        "sqlite": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@modelcontextprotocol/server-sqlite"
+            ],
+            "env": {
+                "DATABASE_PATH": "./data/app.db"
+            }
+        },
+        "filesystem": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@modelcontextprotocol/server-filesystem"
+            ],
+            "env": {
+                "ALLOWED_DIRECTORIES": "./src,./docs,./tests"
+            }
+        },
+        "web-search": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@modelcontextprotocol/server-web-search"
+            ],
+            "env": {
+                "SEARCH_API_KEY": "${SEARCH_API_KEY}"
+            }
+        }
+    },
+    "systemPrompt": "You are a senior software engineer with expertise in modern development practices. You have access to GitHub, Sentry, database, filesystem, and web search capabilities."
+}
